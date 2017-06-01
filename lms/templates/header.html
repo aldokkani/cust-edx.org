@@ -130,17 +130,15 @@ site_status_msg = get_site_status_msg(course_id)
               % endif
             % endif
           </div>
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <div class="item nav-courseware-02">
-                <a class="btn-neutral btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-              </div>
-            % else:
-              <div class="item nav-courseware-02">
-                <a class="btn-neutral btn-register" href="/register">${_("Register")}</a>
-              </div>
-            % endif
-          % endif
+          <div class="item nav-courseware-02">
+              % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                    <a class="btn-neutral btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+                % else:
+                    <a class="btn-neutral btn-register" href="/register">${_("Register")}</a>
+                % endif
+              % endif
+          </div>
         </div>
       </nav>
     % endif
