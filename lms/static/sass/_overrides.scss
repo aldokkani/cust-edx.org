@@ -4,6 +4,28 @@ div.wrapper-header.nav-container {
     min-width: auto !important;
 }
 
+
+
+
+
+
+@media only screen and (max-width : 480px) {
+div.content-wrapper#content .about, .blog, .contact, .donate, .honor, .privacy, .term{
+   text-align: left;
+}
+
+div.content-wrapper#content p{
+   float: left;
+   margin: 10px;
+   padding: 10px;
+   max-width: 300px;
+   height: 300px;
+   border-radius: 0;
+
+
+}
+
+}
 // @media (min-width: 768px) {
 //     .navbar-fixed-top, .navbar-fixed-bottom {
 //         border-radius: 0;
