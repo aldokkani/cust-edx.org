@@ -18,8 +18,8 @@ header div h1.logo {
 @media (max-width: 767px) {
     // hidding h2 tag on mobile screens for better looks
     // hidding the login and register button (being replaced with the collapsing button for mobile)
-    header.header-global div.wrapper-header h2.course-header,
-    #login-site-nav {
+    #login-site-nav,
+    header.header-global div.wrapper-header h2.course-header {
         display: none;
     }
     // fixing dashboard responsiveness
