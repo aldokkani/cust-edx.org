@@ -1,5 +1,5 @@
-
 // fixing the header and static pages responsiveness (section.container.about)
+
 div.wrapper-header.nav-container,
 section#dashboard-main,
 section.container.about {
@@ -9,15 +9,16 @@ section.container.about {
 header div h1.logo {
     margin: -2px 2px 0 10px;
 }
-
 @media (min-width: 768px) {
     // hiding the collapsing button when the screen isn't for mobile
     #my-navbar-toggle {
         display: none;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    // hidding h2 tag on mobile screens for better looks
     // hidding the login and register button (being replaced with the collapsing button for mobile)
+    header.header-global div.wrapper-header h2.course-header,
     #login-site-nav {
         display: none;
     }
@@ -28,13 +29,39 @@ header div h1.logo {
         float: left;
         width: 95%;
     }
-
     // hiding nav link on mobile screens for better looks
     .doc-link {
         display: none !important;
     }
+    // fixing course layout (all course pages)
+    body.view-in-course div.window-wrap {
+        min-width: auto;
+    }
+    //fixing course homepage and progress
+    body.view-in-course div.window-wrap div#content.content-wrapper main#main div.container div.home,
+    body.view-in-course div.window-wrap div#content.content-wrapper main#main div.container section.handouts {
+        display: block;
+        width: auto;
+    }
+    //fixing course wiki page
+    #main div.wiki-wrapper div.article-wrapper #main-article,
+    #main div.wiki-wrapper div.article-wrapper div.article-functions {
+        float: none;
+        width: auto;
+    }
+    // fixing course index (course content it self)
+    div.content-wrapper div.container div.course-wrapper div.course-index,
+    div.content-wrapper div.container div.course-wrapper section#course-content {
+        display: block;
+        width: auto;
+    }
+    // fixing buttons in course index page
+    div#sequence_basic_questions div.sequence-nav button.sequence-nav-button {
+        min-width: auto;
+    }
 }
 // the collapsing button
+
 .my-icon-bar {
     background-color: #888;
     display: block;
